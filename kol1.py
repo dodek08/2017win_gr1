@@ -11,3 +11,54 @@
 #Do your best, show off with good, clean, well structured code - this is more important than number of features.
 #After you finish, be sure to UPLOAD this (add, commit, push) to the remote repository.
 #Good Luck
+
+#!#!usr/bin/env python2.7
+
+class Client:
+	def __init__(self,params): #name
+		self.name=params
+		self.account=0
+
+class Bank:
+	def __init__(self,name):
+        self.name=params
+		self.clientslist=[]
+		self.money_in=0
+		self.money_out=0
+	def add_client(self,newclient):
+		self.clientslist=[clientlist,newclient]
+	def cash_on_accounts(self):
+		sum=0
+		for i in range(len(self.clientslist)):
+			sum=sum+self.clientslist[i].account
+		return sum
+	def client_info(self):
+	if len(self.clientslist) == 0
+		print('there is no clients!')
+	else
+		for i in range(len(self.clientslist)):
+				print(self.clientslist[i].name,' owns $',self.clientslist[i].account)
+	def client_puts_money(self,params): #name amount
+		name=params[1]
+		amount=params[2]
+		self.money_in=self.money_in+amount
+		for i in range(len(self.clientslist)):
+			if name == self.clientslist[i].name
+				self.clientslist[i].account=self.clientslist[i].account+amount
+			else
+				continue
+	def client_withdraws_money(self,params): #name amount
+		name=params[1]
+		amount=params[2]
+		self.money_out=self.money_out+amount
+		for i in range(len(self.clientslist)):
+			if name == self.clientslist[i].name
+				self.clientslist[i].account=self.clientslist[i].account-amount
+			else
+				continue
+B=Bank('Test')
+B.add_client('d')
+B.client_puts_money(['d',100])
+B.client_withdraws_money(['d',100])
+
+	
